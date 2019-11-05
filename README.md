@@ -1,6 +1,6 @@
 zxing 条形码增强扫码
 
-https://github.com/285298984/BarCodeZXing/blob/master/img/1.png
+![image](https://github.com/285298984/BarCodeZXing/blob/master/img/1.png)
 
 使用方法
 ========
