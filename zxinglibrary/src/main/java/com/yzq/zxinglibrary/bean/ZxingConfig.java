@@ -31,6 +31,10 @@ public class ZxingConfig implements Serializable {
     /*是否全屏扫描*/
     private boolean isFullScreenScan = true;
 
+    /*是否改变标题*/
+    private String title = "";
+    /*是否全屏扫描*/
+    private boolean isBarCode = true;
     /*四个角的颜色*/
     @ColorRes
     private int reactColor = R.color.react;
@@ -38,6 +42,14 @@ public class ZxingConfig implements Serializable {
     @ColorRes
     private int frameLineColor = -1;
 
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
     /*扫描线颜色*/
     @ColorRes
@@ -121,5 +133,13 @@ public class ZxingConfig implements Serializable {
 
     public void setShowAlbum(boolean showAlbum) {
         isShowAlbum = showAlbum;
+    }
+
+    public boolean isBarCode() {
+        return isBarCode;
+    }
+
+    public void setBarCode(boolean barCode) {
+        isBarCode = barCode;
     }
 }

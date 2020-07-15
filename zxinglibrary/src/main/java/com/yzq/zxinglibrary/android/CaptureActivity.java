@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.LinearLayoutCompat;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -58,6 +59,7 @@ public class CaptureActivity extends AppCompatActivity implements SurfaceHolder.
     private CameraManager cameraManager;
     private CaptureActivityHandler handler;
     private SurfaceHolder surfaceHolder;
+    private TextView tv_scan_title;
 
 
     public ViewfinderView getViewfinderView() {
@@ -153,6 +155,12 @@ public class CaptureActivity extends AppCompatActivity implements SurfaceHolder.
         } else {
             flashLightLayout.setVisibility(View.GONE);
         }
+
+        if (!TextUtils.isEmpty(config.getTitle())){
+            tv_scan_title = findViewById(R.id.tv_scan_title);
+            tv_scan_title.setText(config.getTitle());
+        }
+
 
     }
 
