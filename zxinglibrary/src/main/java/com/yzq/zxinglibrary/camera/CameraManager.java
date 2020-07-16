@@ -249,11 +249,12 @@ public final class CameraManager {
 
             int screenResolutionX = screenResolution.x;
 
-//            int width = (int) (screenResolutionX * 0.6);
-            int width = (int) (screenResolutionX*0.98);
-            int height = (int) (width * 0.2);
-
-
+            int width = (int) (screenResolutionX * 0.6);
+            int height = width;
+            if(config.isBarCode()){//条形码
+                width = (int) (screenResolutionX * 0.98);
+                height = (int) (width * 0.2);
+            }
             /*水平居中  偏上显示*/
             int leftOffset = (screenResolution.x - width) / 2;
             int topOffset = (screenResolution.y - height) / 5;

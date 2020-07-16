@@ -116,6 +116,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                  * */
                                 ZxingConfig config = new ZxingConfig();
                                 config.setTitle("用户");
+                                config.setBarCode(true);
                                 // config.setPlayBeep(false);//是否播放扫描声音 默认为true
                                 //  config.setShake(false);//是否震动  默认为true
                                 // config.setDecodeBarCode(false);//是否扫描条形码 默认为true
